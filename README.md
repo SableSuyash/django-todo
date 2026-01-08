@@ -1,4 +1,4 @@
-# 🚀 Django CI/CD Deployment on AWS using Docker, GitHub Actions & Terraform
+# 🚀 CI/CD Deployment on AWS using Docker, GitHub Actions & Terraform
 
 This project demonstrates a fully automated CI/CD pipeline to deploy a Django web application on AWS EC2 using Docker containerization, Terraform infrastructure provisioning, and GitHub Actions automation. Every git push to the `main` branch triggers automatic deployment to a stable Elastic IP endpoint.
 
