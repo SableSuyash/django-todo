@@ -148,18 +148,36 @@ jobs:
 1. **Clone repository**
    ```bash
    git clone https://github.com/yourusername/django-todo.git
-   cd django-todo
    ```
+2. **Django Setup**
+   ```bash
+   python -m venv env
+   env/scripts/activate
+   cd django-todo
+   pip install django
+   python.exe -m pip install --upgrade pip
+   python manage.py makemigrations
+   python manage.py migrate
 
-2. **Setup Terraform infrastructure**
+   #The below code: Do it when you are trying to run locally
+   python manage.py caretesuperuser
+
+   python manage.py runserver 0.0.0.0:8000
+   ```
+3. **Setup Terraform infrastructure**
    ```bash
    cd terraform
    terraform init && terraform apply
    ```
 
-3. **Configure GitHub Secrets** (Settings → Secrets → Actions)
+4. **Configure GitHub Secrets** (Settings → Secrets → Actions)
 
-4. **Push to main branch** → Deployment auto-starts!
+<img width="1071" height="376" alt="Screenshot 2026-01-08 191705" src="https://github.com/user-attachments/assets/156e18d4-1b4e-48f5-945c-3057a267691a" />
+
+5. **Push to main branch** → Deployment auto-starts!
+
+   <img width="1502" height="761" alt="Screenshot 2026-01-08 191831" src="https://github.com/user-attachments/assets/420fef88-322f-4d36-bbdf-b946a858c654" />
+
 
 ## ✅ Key Learnings
 
